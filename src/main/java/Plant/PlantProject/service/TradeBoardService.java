@@ -15,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 @AllArgsConstructor
 public class TradeBoardService {
     private final TradeBoardRepository tradeBoardRepository;
+
     @Transactional
     public Long saveTradePost(TradeBoardDto tradeBoardDto){
         return tradeBoardRepository.save(tradeBoardDto.toEntity()).getId();
